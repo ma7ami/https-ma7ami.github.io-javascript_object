@@ -52,4 +52,12 @@ filterPriceBtn.addEventListener('click', () => {
     displayProducts(cheapProducts); // 絞り込んだ結果を表示
 });
 
+filterStockBtn.addEventListener('click', () => {
+    // filterを使って、在庫がある商品だけを絞り込む
+    const stockProducts = products.filter(p => p.inStock === true);
+    displayProducts(stockProducts); // 絞り込んだ結果を表示
+});
+
+
+
 displayProducts(products); // 初期表示
